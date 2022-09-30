@@ -1,3 +1,7 @@
+---
+theme: gaia
+size: 4:3
+---
 # Programação Orientada a Serviços 2022.2
 ## Prof. Diego Cirilo
 ---
@@ -28,18 +32,23 @@
   - Porta 80 (ou 443 para HTTPS)
 ---
 # Métodos HTTP
-| GET | Recebe um recurso existente |
-| POST | Cria um novo recurso |
-| PUT | Atualiza um recurso existente |
-| PATCH | Atualiza parcialmente um recurso existente |
-| DELETE | Remove um recurso |
+ Método | Descrição 
+ GET | Recebe um recurso existente 
+ POST | Cria um novo recurso 
+ PUT | Atualiza um recurso existente 
+ PATCH | Atualiza parcialmente um recurso existente 
+ DELETE | Remove um recurso 
 ---
 # Códigos de status
-| 2xx | Sucesso |
-| 3xx | Redirecionamento |
-| 4xx | Erro de cliente |
-| 5xx | Erro de servidor |
+| Faixa | Categoria 
+| 2xx | Sucesso 
+| 3xx | Redirecionamento 
+| 4xx | Erro de cliente 
+| 5xx | Erro de servidor 
 ---
+# Códigos de status
+| Código | Significado | Descrição |
+
 # REST e SOAP
   - Representational State Transfer
   - Métodos HTTP
