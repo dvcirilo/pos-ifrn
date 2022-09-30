@@ -20,6 +20,26 @@
   - Application Programming Interfaces
   - Web Services: caso especial
 ---
+# Protocolo HTTP
+  - Hyper text transfer protocol
+  - Camada de aplicação
+  - Baseado no modelo cliente-servidor
+  - Padrão de mensagens de requisição e respostas
+  - Porta 80 (ou 443 para HTTPS)
+---
+# Métodos HTTP
+| GET | Recebe um recurso existente |
+| POST | Cria um novo recurso |
+| PUT | Atualiza um recurso existente |
+| PATCH | Atualiza parcialmente um recurso existente |
+| DELETE | Remove um recurso |
+---
+# Códigos de status
+| 2xx | Sucesso |
+| 3xx | Redirecionamento |
+| 4xx | Erro de cliente |
+| 5xx | Erro de servidor |
+---
 # REST e SOAP
   - Representational State Transfer
   - Métodos HTTP
