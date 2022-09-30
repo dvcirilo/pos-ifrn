@@ -32,12 +32,13 @@ size: 4:3
   - Porta 80 (ou 443 para HTTPS)
 ---
 # Métodos HTTP
- Método | Descrição 
- GET | Recebe um recurso existente 
- POST | Cria um novo recurso 
- PUT | Atualiza um recurso existente 
- PATCH | Atualiza parcialmente um recurso existente 
- DELETE | Remove um recurso 
+| Método | Descrição |
+|-------|------|
+| GET | Recebe um recurso existente |
+| POST | Cria um novo recurso |
+| PUT | Atualiza um recurso existente |
+| PATCH | Atualiza parcialmente um recurso existente |
+| DELETE | Remove um recurso |
 ---
 # Códigos de status
 | Faixa | Categoria 
