@@ -217,7 +217,7 @@ print(response.status_code)
 
 ---
 
-# POST
+# PUT
 ```python
 import requests
 api_url = "https://jsonplaceholder.typicode.com/todos/10"
@@ -256,11 +256,17 @@ print(response.json())
 ---
 # Prática
 
-- Acesse a documentação do jsonplaceholder.com
-- Explore os recursos aninhados, exemplo:
+- Acesse a documentação do jsonplaceholder.typicode.com
+- Explore as operações com os recursos aninhados, exemplo:
     - *to-dos* do usuário 3
     - comentários do post 3
+- Identifique os atributos através do navegador
 - Implemente uma CLI para CRUD das *to-dos*
+- Apresente as opções de:
+    - Listar usuários
+    - Listar as tarefas do usuário
+    - Criar/Ler/Atualizar/Deletar usuários
+    - Criar/Ler/Atualizar/Deletar tarefas de usuário
 
 ---
 # SOAP
