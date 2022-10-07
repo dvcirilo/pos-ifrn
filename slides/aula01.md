@@ -230,7 +230,9 @@ print(response.json())
 print(response.status_code)
 
 ```
+
 ---
+
 # PATCH
 
 ```python
@@ -240,6 +242,7 @@ todo = {"title": "Cortar grama"}
 response = requests.patch(api_url, json=todo)
 print(response.json())
 ```
+
 ---
 # DELETE
 
@@ -249,3 +252,18 @@ api_url = "https://jsonplaceholder.typicode.com/todos/10"
 response = requests.delete(api_url)
 print(response.json())
 ```
+
+---
+# Prática
+
+- Acesse a documentação do jsonplaceholder.com
+- Explore os recursos aninhados, exemplo:
+    - *to-dos* do usuário 3
+    - comentários do post 3
+- Implemente uma CLI para CRUD das *to-dos*
+
+---
+# SOAP
+---
+# Interagindo com API SOAP
+---
