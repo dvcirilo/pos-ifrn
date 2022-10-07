@@ -21,13 +21,13 @@ img {
 
 ---
 # Ementa (segunda parte)
- - 5. Programação de serviços
-   - 5.1. Implementação de serviços
-   - 5.2. Instalação e manutenção de webservices
-   - 5.3. Integração de aplicações em diferentes tecnologias
- - 6. Programação de clientes
-   - 6.1. Programação de Clientes Desktop
-   - 6.2. Programação de Clientes Móveis
+5. Programação de serviços
+5.1. Implementação de serviços
+5.2. Instalação e manutenção de webservices
+5.3. Integração de aplicações em diferentes tecnologias
+6. Programação de clientes
+6.1. Programação de Clientes Desktop
+6.2. Programação de Clientes Móveis
 ---
 
 # Conhecimentos
@@ -261,6 +261,9 @@ print(response.json())
     - *to-dos* do usuário 3
     - comentários do post 3
 - Identifique os atributos através do navegador
+---
+# Prática
+
 - Implemente uma CLI para CRUD das *to-dos*
 - Apresente as opções de:
     - Listar usuários
@@ -268,6 +271,10 @@ print(response.json())
     - Criar/Ler/Atualizar/Deletar usuários
     - Criar/Ler/Atualizar/Deletar tarefas de usuário
 
+---
+# Autenticação
+---
+# OAuth
 ---
 # SOAP
 ---
