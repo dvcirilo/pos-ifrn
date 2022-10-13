@@ -1,7 +1,6 @@
 ---
 theme: default
 size: 4:3
-marp: true
 paginate: true
 _paginate: false
 title: Aula 02: APIs REST
