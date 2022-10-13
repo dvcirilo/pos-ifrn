@@ -78,6 +78,7 @@ table {
 - https://suap.ifrn.edu.br/api/docs/ 
 - https://developer.twitter.com/en/docs/api-reference-index
 - https://docs.github.com/en/rest
+
 ---
 # Interagindo com APIs REST em Python
 
@@ -183,5 +184,26 @@ print(response.json())
     - Criar/Ler/Atualizar/Deletar usuários
     - Criar/Ler/Atualizar/Deletar tarefas de usuário
 ---
+# API *Wrappers*
+- Bibliotecas de mais alto nível para acesso a APIs
+- Continuam usando URLs, json, requests, etc...
+- Simplificam a operação para o dev
+- Ex. `python-twitter`, `pygithub`
 
+---
+# Prática
+- Desenvolva um wrapper para a API dos *users*
+- Exemplo de uso:
+```python
+import users-wrapper as users
+
+user = users.read(user_id)
+print(user["name"])
+
+users-list = users.list()
+
+users.delete(user_id)
+```
+
+---
 # <!--fit--> Dúvidas? 🤔
