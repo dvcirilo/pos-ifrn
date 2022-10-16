@@ -174,6 +174,7 @@ print(response.json())
     - *to-dos* do usuário 3
     - comentários do post 3
 - Identifique os atributos através do navegador
+
 ---
 # Prática
 
@@ -183,6 +184,7 @@ print(response.json())
     - Listar as tarefas do usuário
     - Criar/Ler/Atualizar/Deletar usuários
     - Criar/Ler/Atualizar/Deletar tarefas de usuário
+
 ---
 # API *Wrappers*
 - Bibliotecas de mais alto nível para acesso a APIs

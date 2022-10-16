@@ -23,6 +23,16 @@ img {
 
 ---
 # Autenticação
+- Basic auth (HTTP)
+- API Keys
+- OAuth
+
+---
+# Basic Auth
+
+---
+# API Keys
+
 ---
 # OAuth
 ---

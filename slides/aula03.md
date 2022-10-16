@@ -8,6 +8,7 @@ title: Aula 03: APIs SOAP
 author: Diego Cirilo
 
 ---
+
 <style>
 img {
   display: block;
@@ -32,6 +33,7 @@ img {
 
 ---
 # SOAP
+
 - Envelope que define a estrutura de mensagens
 - Conjunto de regras de *encoding* para expressar os tipos de dados
 - Convenção para expressar as chamadas e respostas
@@ -44,12 +46,12 @@ table {
 }
 </style>
 
-| Elemento | Descrição | Obrigatório? |
-|---|---|---|
-| Envelope  | Identifica o documento XML como uma mensagem SOAP | Sim |
-| Cabeçalho | Contém informação de cabeçalho (*header*) | Não |
-| Corpo | Informações de chamada e retorno (*body*) | Sim |
-| Falha | Informações de erros durante o processamento da mensagem | Não |
+| Elemento  | Descrição                                                | Obrigatório? |
+|-----------|----------------------------------------------------------|--------------|
+| Envelope  | Identifica o documento XML como uma mensagem SOAP        | Sim          |
+| Cabeçalho | Contém informação de cabeçalho (*header*)                | Não          |
+| Corpo     | Informações de chamada e retorno (*body*)                | Sim          |
+| Falha     | Informações de erros durante o processamento da mensagem | Não          |
 
 ![bg 100% right:33%](../img/soap.png)
 
