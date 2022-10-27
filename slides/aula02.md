@@ -21,10 +21,11 @@ img {
 **Aula 02**: APIs REST
 
 ---
-# REST e SOAP
+# Principais tipos de API
+- REST
   - Representational State Transfer
   - Métodos HTTP
-  - Payload (Carga útil)
+- SOAP
   - Simple Object Access Protocol
 
 ---
@@ -92,7 +93,7 @@ table {
 
 ```python
 import requests
-api_url = "https://api.github.com/users/dvcirilo"
+api_url = "https://jsonplaceholder.typicode.com/todos"
 response = requests.get(api_url)
 print(response.json())
 ```

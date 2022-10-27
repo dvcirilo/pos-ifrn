@@ -27,6 +27,7 @@ img {
 - *Simple Object Access Protocol*
 - Usualmente XML sobre HTTP
 - Define um protocolo, ao contrário do REST
+- Mais antigo, mais complexo e mais bem definido que o REST
 - Características:
     - Extensibilidade
     - Neutralidade
@@ -60,26 +61,27 @@ table {
 # WSDL
 - *Web Services Description Language*
 - Baseado em XML
-- Usado para descrever um serviço SOAP
+- Usado para descrever um serviço SOAP, como um *schema*.
+
+![bg 100% right:33%](../img/soap.jpeg)
 
 ---
-# XML e Python
-- `untangle`
-- `xmltodict`
+# Consumindo SOAP com Python
+- API de exemplo: http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso
 
 ---
 # Consumindo SOAP com Python
 ```python
 import requests
-# SOAP request URL
+# URL do serviço SOAP
 url = "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso"
 
-# structured XML
+# XML estruturado
 payload = """<?xml version=\"1.0\" encoding=\"utf-8\"?>
 			<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">
 				<soap:Body>
 					<CountryIntPhoneCode xmlns=\"http://www.oorsprong.org/websamples.countryinfo\">
-						<sCountryISOCode>IN</sCountryISOCode>
+						<sCountryISOCode>BR</sCountryISOCode>
 					</CountryIntPhoneCode>
 				</soap:Body>
 			</soap:Envelope>"""
@@ -87,29 +89,34 @@ payload = """<?xml version=\"1.0\" encoding=\"utf-8\"?>
 headers = {
 	'Content-Type': 'text/xml; charset=utf-8'
 }
-# POST request
+# request POST
 response = requests.request("POST", url, headers=headers, data=payload)
 
-# prints the response
+# imprime a resposta
 print(response.text)
 print(response)
 ```
+
+---
+# XML e Python
+- `untangle`
+- `xmltodict`
 
 ---
 # Zeep
 ```python
 import zeep
 
-# set the WSDL URL
+# define a URL do WSDL
 wsdl_url = "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL"
 
-# set method URL
+# define a URL do método
 method_url = "http://webservices.oorsprong.org/websamples.countryinfo/CountryIntPhoneCode"
 
-# set service URL
+# define a URL do serviço
 service_url = "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso"
 
-# create the header element
+# cria o header
 header = zeep.xsd.Element(
 	"Header",
 	zeep.xsd.ComplexType(
@@ -123,35 +130,34 @@ header = zeep.xsd.Element(
 		]
 	),
 )
-# set the header value from header element
+# define o valor do header a partir do objeto header
 header_value = header(Action=method_url, To=service_url)
 
-# initialize zeep client
+# inicializa o cliente zeep
 client = zeep.Client(wsdl=wsdl_url)
 
-# set country code for India
-country_code = "IN"
+# define o código do país para BR
+country_code = "BR"
 
-# make the service call
+# faz a chamada do serviço
 result = client.service.CountryIntPhoneCode(
 	sCountryISOCode=country_code,
 	_soapheaders=[header_value]
 )
-# print the result
-print(f"Phone Code for {country_code} is {result}")
+# imprime o resultado
+print(f"O código de telefone do {country_code} é {result}")
 
-# set country code for United States
+# define o código do país para US
 country_code = "US"
 
-# make the service call
+# faz a chamada do serviço
 result = client.service.CountryIntPhoneCode(
 	sCountryISOCode=country_code,
 	_soapheaders=[header_value]
 )
 
-# print the result
-print(f"Phone Code for {country_code} is {result}")
-print(response)
+# imprime o resultado
+print(f"O código de telefone do {country_code} é {result}")
 ```
 
 ---
