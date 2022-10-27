@@ -26,6 +26,7 @@ img {
 # SOAP
 - *Simple Object Access Protocol*
 - Usualmente XML sobre HTTP
+- Define um protocolo, ao contrário do REST
 - Características:
     - Extensibilidade
     - Neutralidade
