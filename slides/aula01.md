@@ -70,7 +70,7 @@ img {
 ---
 # Códigos de status
 
-| Faixa | Categoria 
+| Faixa | Categoria| 
 |-------|------|
 | 2xx | Sucesso |
 | 3xx | Redirecionamento |

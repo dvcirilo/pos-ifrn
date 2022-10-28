@@ -2,8 +2,6 @@
 
 import requests
 import xmltodict
-import json
-from xml.dom.minidom import parse, parseString
 
 # URL do serviço SOAP
 url = "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso"
@@ -25,10 +23,7 @@ headers = {
 response = requests.request("POST", url, headers=headers, data=payload)
 
 # imprime a resposta
+print(response.text)
 outdict = xmltodict.parse(response.text)
-print(outdict["soap:Envelope"]["soap:Body"])
-
-data = parseString(response.text)
-print(data.getElementsByTagName("m:sISOCode")[0].childNodes)
 
 print(response)
