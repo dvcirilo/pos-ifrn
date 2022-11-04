@@ -1,10 +1,10 @@
 import requests
-import xmltodict
+from xml.dom.minidom import parse, parseString
 
 # URL do serviço SOAP
 url = "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso"
 
-# XML estruturado (solicita nome da moeda do BR)
+# XML estruturado
 payload = """<?xml version=\"1.0\" encoding=\"utf-8\"?>
 			<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">
 				<soap:Body>
@@ -17,11 +17,11 @@ payload = """<?xml version=\"1.0\" encoding=\"utf-8\"?>
 headers = {
 	'Content-Type': 'text/xml; charset=utf-8'
 }
-# request POST, com o XML como data
+# request POST
 response = requests.request("POST", url, headers=headers, data=payload)
 
-# Converte o XML recebido (response.text) em um dict
-dictdata = xmltodict.parse(response.text)
+# Converte o XML para um objeto DOM
+dom = parseString(response.text)
 
-# Seleciona o dado desejado dentro do dict e imprime
-print(dictdata["soap:Envelope"]["soap:Body"]["m:CountryCurrencyResponse"]["m:CountryCurrencyResult"]["m:sName"])
+# Filtra a tag com o dado desejado e imprime o conteúdo
+print(dom.getElementsByTagName("m:sName")[0].firstChild.data)

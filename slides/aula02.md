@@ -64,14 +64,14 @@ table {
 }
 </style>
 
-|Método HTTP | API endpoint | Descrição |
-|---|---|---|
-|GET	|/clientes	                |Lista clientes.|
-|GET	|/clientes/<cliente_id>	|Cliente específico.|
-|POST	|/clientes	                |Cria um novo cliente.|
-|PUT	|/clientes/<cliente_id>	|Atualiza um cliente.|
-|PATCH	|/clientes/<cliente_id>	|Atualiza parcialmente um cliente.|
-|DELETE	|/clientes/<cliente_id>	|Remove um cliente.|
+| Método HTTP | API endpoint           | Descrição                         |
+| ---         | ---                    | ---                               |
+| GET         | /clientes              | Lista clientes.                   |
+| GET         | /clientes/<cliente_id> | Cliente específico.               |
+| POST        | /clientes              | Cria um novo cliente.             |
+| PUT         | /clientes/<cliente_id> | Atualiza um cliente.              |
+| PATCH       | /clientes/<cliente_id> | Atualiza parcialmente um cliente. |
+| DELETE      | /clientes/<cliente_id> | Remove um cliente.                |
 
 ---
 

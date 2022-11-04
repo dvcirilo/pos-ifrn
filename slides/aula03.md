@@ -6,7 +6,6 @@ paginate: true
 _paginate: false
 title: Aula 03: APIs SOAP
 author: Diego Cirilo
-
 ---
 
 <style>
@@ -66,8 +65,37 @@ table {
 ![bg 100% right:33%](../img/soap.jpeg)
 
 ---
-# Consumindo SOAP com Python
-- API de exemplo: http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso
+# Exemplo de API SOAP
+- http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso
+- Exemplo de operação: `CountryCurrency`
+- Requisição (POST)
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <CountryCurrency xmlns="http://www.oorsprong.org/websamples.countryinfo">
+      <sCountryISOCode>string</sCountryISOCode>
+    </CountryCurrency>
+  </soap:Body>
+</soap:Envelope>
+```
+
+---
+# Exemplo de API SOAP
+- Resposta
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <CountryCurrencyResponse xmlns="http://www.oorsprong.org/websamples.countryinfo">
+      <CountryCurrencyResult>
+        <sISOCode>string</sISOCode>
+        <sName>string</sName>
+      </CountryCurrencyResult>
+    </CountryCurrencyResponse>
+  </soap:Body>
+</soap:Envelope>
+```
 
 ---
 # Consumindo SOAP com Python
@@ -99,20 +127,27 @@ print(response)
 
 ---
 # XML e Python
-- `untangle`
-- `xmltodict`
-- `xml.dom.minidom`
+- `untangle` - [exemplo](https://github.com/dvcirilo/pos-ifrn/blob/main/src/exemplo06.py)
+- `xmltodict` - [exemplo](https://github.com/dvcirilo/pos-ifrn/blob/main/src/exemplo04.py)
+- `xml.dom.minidom` - [exemplo](https://github.com/dvcirilo/pos-ifrn/blob/main/src/exemplo05.py)
 
 ---
-# Exemplo `xml.dom.minidom`
+# Tarefa
 
+- Utilize a função `CapitalCity` da API de exemplo para descobrir a capital da Nova Zelândia (NZ)
+- Realize testes com outras funções e faça o *parse* com as 3 bibliotecas de XML apresentadas (untangle, xmltodict e xml.dom.minidom)
 
----
-# Exemplo `xmltodict`
----
-# Exemplo `untangle`
 ---
 # Zeep
+
+- Biblioteca que facilita a interação com APIs SOAP
+- Automaticamente recupera as funções disponíveis através do WSDL e transforma em métodos
+- O usuário não precisa operar com XML diretamente
+- [Documentação](https://docs.python-zeep.org/en/master/)
+
+---
+# Exemplo com Zeep
+
 ```python
 import zeep
 
@@ -143,6 +178,11 @@ result = client.service.CountryIntPhoneCode(
 # imprime o resultado
 print(f"O código de telefone do {country_code} é {result}")
 ```
+
+---
+# Tarefa
+- Utilizando a mesma lógica do exemplo, imprima o nome da capital da Noruega (NO)
+- Acesse a documentação da API de conversão de números [(link)](https://www.dataaccess.com/webservicesserver/NumberConversion.wso), descubra a URL do WSDL e faça um programa que imprime um número digitado (ex. 223) por extenso em inglês (ex. two hundred and twenty three)
 
 ---
 # <!--fit--> Dúvidas? 🤔

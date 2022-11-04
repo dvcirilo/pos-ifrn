@@ -34,48 +34,48 @@ img {
 
 # Conhecimentos
 
-  - Protocolo HTTP
-  - Python/Django
-  - HTML
-  - JavaScript - DOM (Document-Object Model)
+- Protocolo HTTP
+- Python/Django
+- HTML
+- JavaScript - DOM (Document-Object Model)
 
 ---
 
 # APIs e WebServices
 
-  - Application Programming Interfaces
-  - Web Services: caso especial
+- Application Programming Interfaces
+- Web Services: caso especial
 
 ---
 # Protocolo HTTP
 
-  - *Hyper text transfer protocol*
-  - Camada de aplicação
-  - Baseado no modelo cliente-servidor
-  - Padrão de mensagens de requisição e respostas
-  - Porta 80 (ou 443 para HTTPS)
+- *Hyper text transfer protocol*
+- Camada de aplicação
+- Baseado no modelo cliente-servidor
+- Padrão de mensagens de requisição e respostas
+- Porta 80 (ou 443 para HTTPS)
 
 ---
 
 # Métodos HTTP
 
-| Método | Descrição |
-|-------|------|
-| GET | Recebe um recurso existente |
-| POST | Cria um novo recurso |
-| PUT | Atualiza um recurso existente |
-| PATCH | Atualiza parcialmente um recurso existente |
-| DELETE | Remove um recurso |
+| Método  | Descrição                                  |
+| ------- | ------                                     |
+| GET     | Recebe um recurso existente                |
+| POST    | Cria um novo recurso                       |
+| PUT     | Atualiza um recurso existente              |
+| PATCH   | Atualiza parcialmente um recurso existente |
+| DELETE  | Remove um recurso                          |
 
 ---
 # Códigos de status
 
-| Faixa | Categoria| 
-|-------|------|
-| 2xx | Sucesso |
-| 3xx | Redirecionamento |
-| 4xx | Erro de cliente |
-| 5xx | Erro de servidor |
+| Faixa   | Categoria        |
+| ------- | ------           |
+| 2xx     | Sucesso          |
+| 3xx     | Redirecionamento |
+| 4xx     | Erro de cliente  |
+| 5xx     | Erro de servidor |
 
 ---
 # Códigos de status
@@ -106,13 +106,13 @@ table {
 }
 </style>
 
-|Dado|Descrição|
-|---|---|
-|Accept| O tipo de conteúdo que o cliente aceita |
-|Content-Type|	O tipo de conteúdo que o servidor retorna |
-|User-Agent|	Que software o cliente está usando para comunicar com o servidor|
-|Server|	Que software o servidor usa para comunicar com o cliente|
-|Authentication| Quem chama a API que quais suas credenciais |
+| Dado           | Descrição                                                        |
+| ---            | ---                                                              |
+| Accept         | O tipo de conteúdo que o cliente aceita                          |
+| Content-Type   | O tipo de conteúdo que o servidor retorna                        |
+| User-Agent     | Que software o cliente está usando para comunicar com o servidor |
+| Server         | Que software o servidor usa para comunicar com o cliente         |
+| Authentication | Quem chama a API que quais suas credenciais                      |
 
 ---
 

@@ -1,7 +1,4 @@
-#!/usr/bin/env python3
-
 import requests
-import xmltodict
 
 # URL do serviço SOAP
 url = "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso"
@@ -24,6 +21,5 @@ response = requests.request("POST", url, headers=headers, data=payload)
 
 # imprime a resposta
 print(response.text)
-outdict = xmltodict.parse(response.text)
 
 print(response)
