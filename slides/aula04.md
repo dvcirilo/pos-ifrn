@@ -4,7 +4,7 @@ size: 4:3
 marp: true
 paginate: true
 _paginate: false
-title: Aula 03: Autenticação
+title: Aula 04: Autenticação
 author: Diego Cirilo
 
 ---
@@ -19,7 +19,7 @@ img {
 
 ### Prof. Diego Cirilo
 
-**Aula 03**: Autenticação
+**Aula 04**: Autenticação
 
 ---
 # Autenticação
@@ -98,6 +98,11 @@ print(response)
 - Padrão aberto de serviços de autorização
 - Usado na maioria dos serviços grandes, ex. Google, Facebook, Twitter, SUAP, etc.
 - Aplicação deve ser registrada no serviço
+
+---
+# OAuth
+
+![width:700px](../img/oauth.png)
 
 ---
 
