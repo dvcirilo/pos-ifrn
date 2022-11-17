@@ -29,6 +29,7 @@ img {
 
 ---
 # Exemplo Básico
+
 ```python
 from flask import Flask
 
@@ -37,9 +38,10 @@ app = Flask(__name__)
 @app.route("/")
 def hello_world():
     return "<h1> Hello, world! </h1>"
+
 ```
 
-Salve como `app.py`, `flask run` e acesse em http://localhost:5000
+- Salve como `app.py`, `flask run` e acesse em http://localhost:5000
 
 ---
 # Templates
@@ -60,6 +62,7 @@ Salve como `app.py`, `flask run` e acesse em http://localhost:5000
 </body>
 </html>
 ```
+
 ---
 # Templates
 - Para carregar o template em `app.py`
@@ -166,7 +169,7 @@ def create():
 ---
 # Tarefa
 
-Com base na classe criada na tarefa da Aula 02 (api wrapper) desenvolva um cliente para a API de To-Dos e Usuários.
+- Com base na classe criada na tarefa da Aula 02 (api wrapper) desenvolva um cliente para a API de To-Dos e Usuários.
 
 
 
