@@ -57,6 +57,11 @@ print(response)
 ```
 
 ---
+# Tarefa
+
+- Faça um cliente que consiga listar os seguidores do usuário logado e seguir/parar de seguir um usuário no Github pelo terminal.
+
+---
 # API Keys
 - Serviço disponibiliza as chaves
 - Chave é passada no cabeçalho HTTP
@@ -92,6 +97,10 @@ print(response)
 ```
 
 ---
+# Tarefa
+- Faça um cliente que se autentique com as API Keys do SUAP e retorne o boletim do aluno formatado no terminal.
+
+---
 # OAuth
 
 - Open Authorization
@@ -124,9 +133,10 @@ print(response)
 - [Exemplo](https://github.com/dvcirilo/pos-ifrn/tree/main/src/suap_oauth)
 
 ---
-# Tarefa
+# Tarefa Final - Terceira Unidade
 
 - Faça um cliente do SUAP com autenticação OAuth que apresente o perfil do usuário com foto e permita a visualização dos boletins, com seleção de ano/semestre.
+- Caprichem no front-end 😁
 
 
 # <!--fit--> Dúvidas? 🤔
