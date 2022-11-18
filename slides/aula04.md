@@ -97,7 +97,6 @@ print(response)
 - Open Authorization
 - Padrão aberto de serviços de autorização
 - Usado na maioria dos serviços grandes, ex. Google, Facebook, Twitter, SUAP, etc.
-- Aplicação deve ser registrada no serviço
 
 ---
 # OAuth
@@ -105,5 +104,29 @@ print(response)
 ![width:700px](../img/oauth.png)
 
 ---
+# OAuth
+
+- Aplicações devem ser registradas no serviço
+    - Client ID e Client Secret
+    - Redirect URI
+- API Disponibiliza:
+    - Access Token - URL
+    - Authorization URL
+- Aplicação deve guardar token (session)
+
+---
+# Acesso OAuth do SUAP no Flask
+
+- Registre sua aplicação em https://suap.ifrn.edu.br/api/
+- Authorization grant type: `authorization-code`
+- Redicert URIs: `http://localhost:5000/login/authorized`
+- Guarde o Client ID e Client Secret
+- [Exemplo](https://github.com/dvcirilo/pos-ifrn/tree/main/src/suap_oauth)
+
+---
+# Tarefa
+
+- Faça um cliente do SUAP com autenticação OAuth que apresente o perfil do usuário com foto e permita a visualização dos boletins, com seleção de ano/semestre.
+
 
 # <!--fit--> Dúvidas? 🤔
