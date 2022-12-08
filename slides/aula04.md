@@ -138,5 +138,6 @@ print(response)
 - Faça um cliente do SUAP com autenticação OAuth que apresente o perfil do usuário com foto e permita a visualização dos boletins, com seleção de ano/semestre.
 - Caprichem no front-end 😁
 
+---
 
 # <!--fit--> Dúvidas? 🤔
