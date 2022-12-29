@@ -4,7 +4,8 @@ import requests
 class Users:
    
     # URL do serviço REST
-    base_url = "https://jsonplaceholder.typicode.com/users/"
+    #base_url = "https://jsonplaceholder.typicode.com/users/"
+    base_url = "http://localhost:5001/users/"
 
     def list(self):
         url = self.base_url

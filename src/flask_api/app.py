@@ -1,20 +1,39 @@
-from flask import Flask, render_template
-import requests
+import json
+from flask import Flask, jsonify
 
+f = open('todos.json')
+todos = json.load(f)
+f.close()
 
-base_url = "https://jsonplaceholder.typicode.com/users/"
-
-user_list = requests.get(base_url).json()
+f = open('users.json')
+user_list = json.load(f)
+f.close()
 
 app = Flask(__name__)
 
 @app.route("/")
-def hello_world():
-    return render_template('index.html', users=user_list)
+@app.route("/users/")
+def default():
+    return jsonify(user_list)
 
-@app.route("/teste")
-def second_test():
-    return "<p> Outro teste! </p>"
+@app.route("/users/<int:userid>")
+def user(userid):
+    return jsonify(user_list[userid-1])
+
+@app.route("/users/<int:userid>/todos")
+def usertodos(userid):
+    filtered = []
+    for todo in todos:
+        if (todo["userId"]==userid-1):
+            filtered.append(todo)
+    return jsonify(filtered)
+
+@app.route('/users/', methods=['POST'])
+def update_record():
+    record = json.loads(request.data)
+    print(record)
+    new_records = []
+    return jsonify(record)
 
 if __name__ == "__main__":
     app.run()
