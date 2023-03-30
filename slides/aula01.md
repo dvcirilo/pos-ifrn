@@ -71,6 +71,11 @@ img {
 - Desenvolvimento de projetos.
 
 ---
+# Linguagens e Ferramentas
+- HTML/JS
+- Python/Flask
+
+---
 # Cronograma
 
 ## Primeira Unidade (23/03 a 29/05):
@@ -97,5 +102,19 @@ img {
 - Projeto em dupla (50pts) - 05/01/2024 (provável)
 
 ---
+
+# <!-- fit --> Programação Orientada a Serviços
+
+---
+
+# Programação Orientada a Serviços
+
+- Service Oriented Architecture (SOA)
+- Sistemas monolíticos
+- Arquitetura Cliente - Serviço
+- Componentes reutilizáveis
+- Manutenção
+- Custo
+
 
 # <!--fit--> Dúvidas? 🤔
