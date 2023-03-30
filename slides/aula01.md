@@ -22,6 +22,12 @@ img {
 **Aula 01**: Apresentação da disciplina e conceitos
 
 ---
+# Objetivos
+- Estruturar dados em documentos XML e JSON;
+- Processar documentos XML e JSON;
+- Programar servidores e clientes de WebServices.
+
+---
 # Ementa
 1. Linguagens de descrição de dados
     1.1. XML
