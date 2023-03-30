@@ -79,7 +79,7 @@ img {
 # Cronograma
 
 ## Primeira Unidade (23/03 a 29/05):
-- Itens 4 e 6 da ementa;
+- Item 4 da ementa;
 - Seminário/Resumo/Quiz (50pts) - 18/05 e 19/05 (provável)
 - Quiz (50pts) - 26/05 (provável)
 
