@@ -4,7 +4,7 @@ size: 4:3
 marp: true
 paginate: true
 _paginate: false
-title: Aula 01: Apresentação da Disciplina e Conceitos
+title: Aula 01: Apresentação da Disciplina
 author: Diego Cirilo
 
 ---
@@ -22,97 +22,73 @@ img {
 **Aula 01**: Apresentação da disciplina e conceitos
 
 ---
-# Ementa (segunda parte)
+# Ementa
+1. Linguagens de descrição de dados
+    1.1. XML
+    1.2. JSON
+2. Linguagens de definição de sintaxe
+    2.1. Documento de definição de tipos (DTD)
+    2.2. Esquemas XML
+3. Processamento de documentos
+    3.1. DOM (Document Object Model)
+    3.2. Bibliotecas JSON
+
+---
+# Ementa
+4. Computação orientada a serviços
+    4.1. Objetivos e benefícios da computação orientada a serviço
+    4.2. Contratos de serviços
+    4.3. Acoplamento de serviços
+    4.4. Abstração de serviços
+    4.5. Capacidade de reuso
+    4.6. Autonomia de serviços
+    4.7. Independência de estado de serviços
+    4.8. Visibilidade de serviços
+    4.9. Orientação a objetos e orientação a serviços
+    4.10. Composição e serviços
+
+---
+# Ementa
 5. Programação de serviços
-5.1. Implementação de serviços
-5.2. Instalação e manutenção de webservices
-5.3. Integração de aplicações em diferentes tecnologias
+    5.1. Implementação de serviços
+    5.2. Instalação e manutenção de webservices
+    5.3. Integração de aplicações em diferentes tecnologias
 6. Programação de clientes
-6.1. Programação de Clientes Desktop
-6.2. Programação de Clientes Móveis
----
-
-# Conhecimentos
-
-- Protocolo HTTP
-- Python/Django
-- HTML
-- JavaScript - DOM (Document-Object Model)
+    6.1. Programação de Clientes Desktop
+    6.2. Programação de Clientes Móveis
 
 ---
+# Procedimentos Metodológicos
 
-# APIs e WebServices
-
-- Application Programming Interfaces
-- Web Services: caso especial
-
----
-# Protocolo HTTP
-
-- *Hyper text transfer protocol*
-- Camada de aplicação
-- Baseado no modelo cliente-servidor
-- Padrão de mensagens de requisição e respostas
-- Porta 80 (ou 443 para HTTPS)
+- Aulas teóricas expositivas;
+- Aulas práticas em laboratório;
+- Desenvolvimento de projetos.
 
 ---
+# Cronograma
 
-# Métodos HTTP
+## Primeira Unidade (23/03 a 29/05):
+- Itens 4 e 6 da ementa;
+- Seminário/Resumo/Quiz (50pts) - 18/05 e 19/05 (provável)
+- Quiz (50pts) - 26/05 (provável)
 
-| Método  | Descrição                                  |
-| ------- | ------                                     |
-| GET     | Recebe um recurso existente                |
-| POST    | Cria um novo recurso                       |
-| PUT     | Atualiza um recurso existente              |
-| PATCH   | Atualiza parcialmente um recurso existente |
-| DELETE  | Remove um recurso                          |
-
----
-# Códigos de status
-
-| Faixa   | Categoria        |
-| ------- | ------           |
-| 2xx     | Sucesso          |
-| 3xx     | Redirecionamento |
-| 4xx     | Erro de cliente  |
-| 5xx     | Erro de servidor |
+## Segunda Unidade (30/05 a 02/08)
+- Itens 1, 2 e 3 da ementa;
+- Tarefas práticas em sala de aula (50pts) - toda semana
+- Quiz (50pts) - 28/07 (provável)
 
 ---
-# Códigos de status
+# Cronograma
 
-<style scoped>
-table {
-  font-size: 16px;
-}
-</style>
-| Código | Significado                | Descrição                                                                      |
-|--------|----------------------------|--------------------------------------------------------------------------------|
-| 200    | OK                         | The requested action was successful.                                           |
-| 201    | Created                    | A new resource was created.                                                    |
-| 202    | Accepted                   | The request was received, but no modification has been made yet.               |
-| 204    | No Content                 | The request was successful, but the response has no content.                   |
-| 400    | Bad Request                | The request was malformed.                                                     |
-| 401    | Unauthorized               | The client is not authorized to perform the requested action.                  |
-| 404    | Not Found                  | The requested resource was not found.                                          |
-| 415    | Unsupported Media Type     | The request data format is not supported by the server.                        |
-| 422    | Unprocessable Entity       | The request data was properly formatted but contained invalid or missing data. |
-| 500    | Internal Server Error      | The server threw an error when processing the request.                         |
+## Terceira Unidade (26/08 a 02/11):
+- Itens 6 e 5 da ementa;
+- Tarefas práticas em sala de aula (50pts) - toda semana
+- Projeto em dupla (50pts) - 27/10 (provável)
 
----
-# Cabeçalho HTTP
-<style scoped>
-table {
-  font-size: 18px;
-}
-</style>
-
-| Dado           | Descrição                                                        |
-| ---            | ---                                                              |
-| Accept         | O tipo de conteúdo que o cliente aceita                          |
-| Content-Type   | O tipo de conteúdo que o servidor retorna                        |
-| User-Agent     | Que software o cliente está usando para comunicar com o servidor |
-| Server         | Que software o servidor usa para comunicar com o cliente         |
-| Authentication | Quem chama a API que quais suas credenciais                      |
+## Quarta Unidade (03/11 a 09/01/2024)
+- Item 5 da ementa;
+- Tarefas práticas em sala de aula (50pts) - toda semana
+- Projeto em dupla (50pts) - 05/01/2024 (provável)
 
 ---
 
