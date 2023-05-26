@@ -54,10 +54,10 @@ img {
 ]>
 <nota>
     <para>Chucky</para>
-    <de>Annabelle</from>
+    <de>Annabelle</de>
     <cabecalho>Bilhetinho</cabecalho>
     <corpo>Oi sumido, rs</corpo>
-</note>
+</nota>
 ```
 
 ---
@@ -65,13 +65,13 @@ img {
 - Externo:
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE nomeraiz SYSTEM "definicoes.dtd">
+<!DOCTYPE nota SYSTEM "definicoes.dtd">
 <nota>
     <para>Chucky</para>
-    <de>Annabelle</from>
+    <de>Annabelle</de>
     <cabecalho>Bilhetinho</cabecalho>
     <corpo>Oi sumido, rs</corpo>
-</note>
+</nota>
 ```
 - `definicoes.dtd`
 ```xml
@@ -122,9 +122,17 @@ img {
 # Exemplos
 ```xml
 <!ELEMENT usuario(nome, cpf, endereco)>
+```
+```xml
 <!ELEMENT usuario(nome, cpf?, endereco*)>
+```
+```xml
 <!ELEMENT usuario(nome, (email|cpf)?, endereco*)>
+```
+```xml
 <!ELEMENT livro(autor+, titulo, num_paginas?)>
+```
+```xml
 <!ELEMENT livro(autor+, titulo, subtitulo?, editora)>
 ```
 
@@ -142,7 +150,11 @@ img {
 # Exemplos
 ```xml
 <!ATTLIST livro isbn CDATA #REQUIRED>
+```
+```xml
 <!ATTLIST ingrediente unidade (g|l|kg) #REQUIRED>
+```
+```xml
 <!ATTLIST pagamento tipo (credito|debito|pix) "pix">
 ```
 
@@ -160,16 +172,17 @@ img {
 
 
 ---
-<style scoped>section { font-size: 20px; }</style>
+<style scoped>section { font-size: 22px; }</style>
 # Tarefa
 - Crie um DTD `definicoes.dtd` para o XML da aula passada, os requisitos são os seguintes:
-    - Elemento prato deve conter obrigatoriamente um atributo `id` do tipo ID;
-    - Elemento prato deve conter os sub-elementos `nome`, `descricao`, `ingredientes`, `preco`, `calorias` e `tempoPreparo`;
+    - Elemento raiz é `cardapio` e deve conter um ou mais elementos `prato`.
+    - Elemento `prato` deve conter obrigatoriamente um atributo `id` do tipo ID;
+    - Elemento `prato` deve conter os sub-elementos `nome`, `descricao`, `ingredientes`, `preco`, `calorias` e `tempoPreparo`;
     - Elemento `ingredientes` deve conter 1 ou mais sub-elementos `ingrediente`;
     - Os demais elementos são do tipo PCDATA;
-    - O elemento preço deve conter um atributo moeda, com as opções `BRL` e `USD`, o padrão deve ser `BRL`.
-    - Defina uma entidade para reais como `R$`.
-- Atualize o seu XML para o padrão desse DTD e coloque a tag `<!DOCTYPE...` apontando para o arquivo `definicoes.dtd`
+    - O elemento `preco` deve conter um atributo `moeda`, com as opções `BRL` e `USD`, o padrão deve ser `BRL`.
+    - Defina uma entidade chamada `reais` com o valor `R$`.
+- Atualize o seu XML para o padrão desse DTD e coloque a tag `<!DOCTYPE...` , indicando o elemento raiz `cardapio` e apontando para o arquivo `definicoes.dtd`
 
 ---
 
