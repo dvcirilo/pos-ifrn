@@ -89,6 +89,35 @@ img {
 ```
 
 ---
+# Tipos de elementos
+- Composto
+```xml
+<autor>
+    <nome>Jose</nome>
+    <sobrenome>Silva</sobrenome>
+</autor>
+```
+
+- Texto
+```xml
+<autor>Jose Silva</autor>
+```
+
+---
+# Tipos de elementos
+- Misto
+```xml
+<autor>Jose Silva
+    <email>joesilva@silva.com</email>
+</autor>
+```
+
+- Vazio
+```xml
+<autor/>
+```
+
+---
 # Atributos
 - Associados a um elemento com dados ou vazio.
 - Valores entre aspas
