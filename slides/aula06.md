@@ -86,7 +86,7 @@ img {
 ---
 # Sintaxe
 
-- `!DOCTYPE nomeraiz` -  Define o DTD e qual o elemento raiz.
+- `<!DOCTYPE nomeraiz ...>` -  Define o DTD e qual o elemento raiz.
 - `<!ELEMENT ...>` - Informações do elemento.
 - `<!ATTLIST ...>` - Informações dos atributos.
 - `<!ENTITY ...>` - Informações da entidade.
@@ -121,26 +121,26 @@ img {
 ---
 # Exemplos
 ```xml
-<!ELEMENT usuario(nome, cpf, endereco)>
+<!ELEMENT usuario (nome, cpf, endereco)>
 ```
 ```xml
-<!ELEMENT usuario(nome, cpf?, endereco*)>
+<!ELEMENT usuario (nome, cpf?, endereco*)>
 ```
 ```xml
-<!ELEMENT usuario(nome, (email|cpf)?, endereco*)>
+<!ELEMENT usuario (nome, (email|cpf)?, endereco*)>
 ```
 ```xml
-<!ELEMENT livro(autor+, titulo, num_paginas?)>
+<!ELEMENT livro (autor+, titulo, num_paginas?)>
 ```
 ```xml
-<!ELEMENT livro(autor+, titulo, subtitulo?, editora)>
+<!ELEMENT livro (autor+, titulo, subtitulo?, editora)>
 ```
 
 ---
 # Atributos
 - `<!ATTLIST nomeelemento nomeatributo tipo valor>`
 - Tipo
-    - CDATA, ID, etc.
+    - CDATA, ID (não pode iniciar com número), etc.
     - Lista. Ex. (valor1|valor2|valor3)
 - Valor
     - Padrão "valor-padrao"
@@ -167,7 +167,7 @@ img {
 <!ENTITY escritor "Pato Donald">
 <!ENTITY copyright "Copyright Disney">
 ```
-- No XML chamamos com `&`nome e `;`, ex:
+- No XML chamamos com `&nome;`, ex:
     - `<autor>&escritor;&copyright;</autor>`
 
 
@@ -185,5 +185,22 @@ img {
 - Atualize o seu XML para o padrão desse DTD e coloque a tag `<!DOCTYPE...` , indicando o elemento raiz `cardapio` e apontando para o arquivo `definicoes.dtd`
 
 ---
+<style scoped>section { font-size: 20px; }</style>
+# Tarefa
+- Crie um XML `imobiliaria.xml` com DTD **interno** para os dados de uma imobiliária que cumpra os seguintes requisitos:
+    - O elemento raiz é `imobiliária` e deve conter um ou mais elementos `imovel`.
+    - O elemento `imovel` deve conter os sub-elementos `descricao`, `proprietario`, `endereco`, `caracteristicas` e `valor`.
+    - O elemento `proprietario` deve conter os sub-elementos `nome` e pelo menos um `email` ou `telefone` (pode ter mais de um).
+    - O elemento `endereco` deve conter os sub-elementos `rua`, `bairro`, `cidade` e `número`, que deve ser opcional.
+    - O elemento `caracteristicas` deve conter os sub-elementos `tamanho`, `numQuartos` e  `numBanheiros`.
+    - O tipo de dado padrão para os demais elementos é PCDATA.
+- Crie pelo menos 5 imóveis válidos.
+    - Inclua pelo menos um proprietário com 2 telefones e um email e outro apenas com um telefone.
+    - Teste também um imóvel sem número.
+---
+# Tarefa
+- Crie um XML válido com pelo menos 5 questões de 4 alternativas para o [quiz.dtd](https://dvcirilo.github.io/docs/quiz.dtd)
+- Use o VSCode para validar o XML.
 
+---
 # <!--fit--> Dúvidas? 🤔
