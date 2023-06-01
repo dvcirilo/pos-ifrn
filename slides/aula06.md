@@ -199,7 +199,7 @@ img {
     - Teste também um imóvel sem número.
 ---
 # Tarefa
-- Crie um XML válido com pelo menos 5 questões de 4 alternativas para o [quiz.dtd](https://dvcirilo.github.io/docs/quiz.dtd)
+- Crie um XML válido com pelo menos 5 questões de 4 alternativas para o [quiz.dtd](https://dvcirilo.github.io/pos-ifrn/docs/quiz.dtd)
 - Use o VSCode para validar o XML.
 
 ---
