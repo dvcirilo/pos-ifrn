@@ -43,7 +43,7 @@ img {
         <descrição>Sanduíche tradicional</descrição>
         <valor>6</valor>
     </prato>
-</louça>
+</cardápio>
 
 ```
 ---
@@ -74,7 +74,7 @@ img {
         <c:descrição>Sanduíche tradicional</c:descrição>
         <c:valor>6</c:valor>
     </c:prato>
-</c:louça>
+</c:cardápio>
 
 ```
 
@@ -95,7 +95,7 @@ img {
             <c:descrição>Sanduíche tradicional</c:descrição>
             <c:valor>6</c:valor>
         </c:prato>
-    </c:louça>
+    </c:cardápio>
 </raiz>
 
 ```
