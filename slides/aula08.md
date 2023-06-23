@@ -289,6 +289,153 @@ img {
 - `<attribute name="nome" type="tipodedado" use="required"/>`
 
 ---
+# Elementos Vazios
+- Descrevo um tipo complexo, mas não adiciono elementos
+```xml
+<element name="produto" type="tipoProduto"/>
+
+<complexType name="tipoProduto">
+  <attribute name="idProd" type="positiveInteger"/>
+</complexType>
+```
+
+---
+# Elementos apenas texto (com atributos)
+- Apenas elementos complexos podem ter atributos
+- Declaro um elemento complexo, mas com conteúdo simples, e os atributos
+```xsd
+<element name="tamanhoSapato" type="tipoSapato"/>
+
+<complexType name="tipoSapato">
+  <simpleContent>
+    <extension base="integer">
+      <attribute name="país" type="string" />
+    </extension>
+  </simpleContent>
+</complexType>
+```
+```xml
+<tamanhoSapato país="Brasil">42</tamanhoSapato>
+```
+
+---
+# Elementos mistos (texto, sub-elementos e atributos)
+```xml
+<element name="carta" type="tipoCarta"/>
+
+<complexType name="tipoCarta" mixed="true">
+  <sequence>
+    <element name="nome" type="string"/>
+    <element name="idPedido" type="positiveInteger"/>
+    <element name="dataEnvio" type="date"/>
+  </sequence>
+</complexType>
+```
+```xml
+<carta>
+    Prezado <nome>Mr. Burns</nome>.
+    Seu pedido <idPedido>23</idPedido> será enviado
+    em <dataEnvio>2023-06-23</dataEnvio>.
+</carta>
+```
+
+---
+# Indicadores
+- *Indicadores* são utilizados para controlar como os elementos serão utilizados no documento.
+- São sete:
+    - Ordem: `all`, `choice`, `sequence`
+    - Cardinalidade: `maxOccurs`, `minOccurs`
+    - Agrupamento: `group name` e `attributeGroup name`
+
+---
+# Indicadores de ordem
+- `all` - os elementos podem aparecer em qualquer ordem, mas no máximo uma vez. `minOccurs` pode ser 0 ou 1.
+- `choice` - apenas um dos elementos pode ocorrer.
+- `sequence` - os elementos devem aparecer na sequência.
+
+---
+# Exemplos
+```xml
+<element name="pessoa">
+    <complexType>
+        <all>
+            <element name="nome" type="string"/>
+            <element name="sobrenome" type="string"/>
+        </all>
+    </complexType>
+</element>
+```
+```xml
+<element name="pessoa">
+    <complexType>
+        <choice>
+            <element name="funcionario" type="funcionario"/>
+            <element name="membro" type="membro"/>
+        </choice>
+    </complexType>
+</element>
+```
+
+---
+# Agrupamento
+- `group name="nomedogrupo"` - definição de grupo. Deve conter um indicador de ordem.
+- `attributeGroup name="nomedogrupo"` - grupo de atributos.
+
+---
+# Exemplos
+```xml
+<group name="grupoPessoa">
+    <sequence>
+        <element name="nome" type="string"/>
+        <element name="sobrenome" type="string"/>
+        <element name="dataNascimento" type="date"/>
+    </sequence>
+</group>
+```
+```xml
+<attributeGroup name="grupoAttrPessoa">
+    <attribute name="nome" type="string"/>
+    <attribute name="sobrenome" type="string"/>
+    <attribute name="dataNascimento" type="date"/>
+</attributeGroup>
+```
+
+---
+# `any` e `anyAttribute`
+- Os elementos `any` e `anyAttribute` permitem que o usuário adicione qualquer elemento ou atributo no XML.
+- Permite a extensão dos documentos, sem violar o XSD.
+
+```xml
+<element name="pessoa">
+    <complexType>
+        <sequence>
+            <element name="nome" type="string"/>
+            <element name="sobrenome" type="string"/>
+            <any minOccurs="0"/>
+        </sequence>
+    </complexType>
+</element>
+```
+
+---
+# Substituição de elementos
+- Permite fazer com que dois elementos sejam equivalentes
+- Útil para dar suporte a múltiplas línguas
+```xml
+<xs:element name="name" type="xs:string"/>
+<xs:element name="nome" substitutionGroup="name"/>
+
+<xs:complexType name="infoCliente">
+  <xs:sequence>
+    <xs:element ref="nome"/>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:element name="cliente" type="infoCliente"/>
+<xs:element name="customer" substitutionGroup="cliente"/>
+```
+
+---
 # Exemplos
 - [Nota Fiscal Eletrônica](https://www.nfe.fazenda.gov.br/portal/listaConteudo.aspx?tipoConteudo=BMPFMBoln3w=)
 
