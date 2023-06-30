@@ -61,7 +61,8 @@ img {
 ```xml
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
         xmlns:b="http://cartaodevisitas.org"
-        targetNamespace="http://cartaodevisitas.org">
+        targetNamespace="http://cartaodevisitas.org"
+        elementFormDefault="qualified">
 
   <element name="cartao" type="b:cartao_type"/>
   <element name="nome" type="string"/>
@@ -94,6 +95,8 @@ img {
     - `xmlns="http://www.w3.org/2001/XMLSchema"` namespace do XML Schema padrão.
     - `xmlns:b="http://cartaodevisitas.org"` define o prefixo `b` para o namespace do cartão.
     - `targetNamespace="http://cartaodevisitas.org"` indica qual namespace que esse XSD descreve.
+    - `elementFormDefault="qualified"` indica se os elementos devem ser qualificados por um namespace.
+- [Detalhes](https://stackoverflow.com/questions/1463138/what-does-elementformdefault-do-in-xsd)
 
 ---
 # Sintaxe
@@ -103,6 +106,7 @@ img {
     - `xsi:schemaLocation="http://cartaodevisitas.org cartao.xsd"` chamada do arquivo XSD.
         - O primeiro argumento é o namespace, e o segundo o arquivo
         - Perceba o uso do prefixo `xsi`
+    - `elementFormDefault="qualified"`
 
 ---
 # Sintaxe
@@ -273,7 +277,7 @@ img {
 ```
 
 ---
-# Exercício
+# Exemplo
 - Crie um XML Schema básico para um prato (elemento raiz) que tenha os elementos: 
     - `nome` (string com 100 caracteres no máximo)
     - `refeição` (`café`, `almoço` ou `janta`)
@@ -281,6 +285,7 @@ img {
     - `preço` (decimal com duas casas)
     - `dataCadastro` (data)
 - Crie um XML que use o schema acima e valide no VS Code.
+
 
 ---
 # Atributos
@@ -436,8 +441,30 @@ img {
 ```
 
 ---
+# Tipos de implementação
+- Aninhada
+    - Estrutura lógica, porém dificulta o reuso e é mais complexa para manter
+- Uso do atributo `ref`
+    - Todos os elementos simples são definidos no início do código e os complexos depois, usando o atributo `ref` para referenciar os elementos simples.
+- Definição de tipos customizados
+    - Tipos customizados são definidos de maneira análoga a classes (POO) e depois os elementos/atributos são criados usando os tipos customizados.
+
+---
 # Exemplos
 - [Nota Fiscal Eletrônica](https://www.nfe.fazenda.gov.br/portal/listaConteudo.aspx?tipoConteudo=BMPFMBoln3w=)
+
+---
+<style scoped>section { font-size: 22px; }</style>
+# Tarefa
+- Crie um XSD `cardapio.xsd` para o XML da aula 05, os requisitos são os seguintes:
+    - Elemento raiz é `cardapio` e deve conter um ou mais elementos `prato`.
+    - Elemento `prato` deve conter obrigatoriamente um atributo `id` do tipo `integer`;
+    - Elemento `prato` deve conter os sub-elementos `nome`, `descricao`, `ingredientes`, `preco`, `calorias` e `tempoPreparo`;
+    - Elemento `ingredientes` deve conter 1 ou mais sub-elementos `ingrediente`;
+    - `calorias` deve ser `integer` e `preco` `decimal` com duas casas.
+    - Os demais elementos são do tipo `string`;
+    - O elemento `preco` deve conter um atributo `moeda`, com as opções `BRL` e `USD`, o padrão deve ser `BRL`.
+- Valide seu XML com esse XSD
 
 ---
 # <!--fit--> Dúvidas? 🤔
