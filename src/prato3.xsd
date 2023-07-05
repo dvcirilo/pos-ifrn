@@ -2,33 +2,33 @@
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
     xmlns:p="http://prato.org"
     targetNamespace="http://prato.org"
-    elementFormDefault="unqualified">
+    elementFormDefault="qualified">
 
-    <element name="nome">
-        <simpleType>
-            <restriction base="string">
-                <maxLength value="100"/>
-            </restriction>
-        </simpleType>
-    </element>
+    <simpleType name="nomeType">
+        <restriction base="string">
+            <maxLength value="100"/>
+        </restriction>
+    </simpleType>
 
-    <element name="refeição">
-        <simpleType>
-            <restriction base="string">
-                <enumeration value="café"/>
-                <enumeration value="almoço"/>
-                <enumeration value="janta"/>
-            </restriction>
-        </simpleType>
-    </element>
+    <simpleType name="refeiçãoType">
+        <restriction base="string">
+            <enumeration value="café"/>
+            <enumeration value="almoço"/>
+            <enumeration value="janta"/>
+        </restriction>
+    </simpleType>
 
-    <element name="preço">
-        <simpleType>
-            <restriction base="decimal">
-                <fractionDigits value="2"/>
-            </restriction>
-        </simpleType>
-    </element>
+    <simpleType name="dinheiroType">
+        <restriction base="decimal">
+            <fractionDigits value="2"/>
+        </restriction>
+    </simpleType>
+
+    <element name="nome" type="p:nomeType"/>
+
+    <element name="refeição" type="p:refeiçãoType"/>
+
+    <element name="preço" type="p:dinheiroType"/>
 
     <element name="dataCadastro" type="date"/>
 
