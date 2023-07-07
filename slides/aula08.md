@@ -467,4 +467,46 @@ img {
 - Valide seu XML com esse XSD
 
 ---
+<style scoped>section { font-size: 20px; }</style>
+# Tarefa
+- Crie um XSD `imobiliaria.xsd` para os dados de uma imobiliária que cumpra os seguintes requisitos:
+    - O elemento raiz é `imobiliária` e deve conter um ou mais elementos `imovel`.
+    - O elemento `imovel` deve conter os sub-elementos `descricao`, `proprietario`, `endereco`, `caracteristicas` e `valor`.
+    - O elemento `proprietario` deve conter os sub-elementos `nome` e pelo menos um `email` ou `telefone` (pode ter mais de um).
+    - O elemento `endereco` deve conter os sub-elementos `rua`, `bairro`, `cidade` e `número`, que deve ser opcional.
+    - O elemento `caracteristicas` deve conter os sub-elementos `tamanho`, `numQuartos` e  `numBanheiros`.
+    - `número`, `numQuartos` e `numBanheiros` são `integer` e `tamanho` é `decimal`
+    - O tipo de dado padrão para os demais elementos é `string`.
+- Crie pelo menos 5 imóveis válidos.
+    - Inclua pelo menos um proprietário com 2 telefones e um email e outro apenas com um telefone.
+    - Teste também um imóvel sem número.
+
+---
+# Tarefa
+- Crie um XSD equivalente ao DTD [quiz.dtd](https://dvcirilo.github.io/pos-ifrn/docs/quiz.dtd)
+- Use o VSCode para validar o XML criado para essa questão na aula 06.
+
+---
+<style scoped>section { font-size: 16px; }</style>
+# Tarefa
+- Crie um XML válido e um XSD para um `tcc` com os seguintes requisitos:
+    - Elemento raiz `tcc` com os elementos `cabeçalho`, `pretextuais`, `corpo` e `postextuais`.
+    - O elemento `cabeçalho` deve conter `título`, `subtítulo`, `autor`, `data`, `instituição`, `natureza`, `orientador` e `coorientador`.
+        - O elemento `autor` pode ser repetido.
+        - Os elementos `subtítulo` e `coorientador` são opcionais, mas não podem ser repetidos.
+        - Os elementos `orientador` e `coorientador` devem ter um atributo `titulação` do tipo `string`.
+    - O elemento `pretextuais` deve conter `resumo`, `abstract`, `agradecimentos`, `dedicatória` e `epígrafe`
+        - Os elementos `agradecimento`, `dedicatória` e `epígrafe` são opcionais e não podem ser repetidos.
+    - O elemento `corpo` deve conter um ou mais elementos `seção`.
+        - Cada elemento `seção` deve conter um atributo `título`.
+    - O elemento `postextuais` deve conter o elemento `referências` e pode conter os elementos `anexos` e `apêndices`.
+        - O elemento `anexos` deve conter um ou mais elementos `anexo`.
+            - O elemento `anexo` deve conter um atributo "título".
+        - O elemento `apêndices` deve conter um ou mais elementos `apêndice`.
+            - O elemento `apêndice` deve conter um atributo "título".
+- Os demais casos devem ser do tipo `string`.
+- Preencha o XML com dados fictícios, usando todas os elementos obrigatórios e alguns (ou todos) elementos opcionais. O documento deve conter pelo menos 3 seções (Introdução, Desenvolvimento e Conclusão).
+- [Fonte](http://site.ufvjm.edu.br/revistamultidisciplinar/files/2011/09/NBR_14724_atualizada_abr_2011.pdf)
+
+---
 # <!--fit--> Dúvidas? 🤔
