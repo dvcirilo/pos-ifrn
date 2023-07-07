@@ -463,7 +463,7 @@ img {
     - Elemento `ingredientes` deve conter 1 ou mais sub-elementos `ingrediente`;
     - `calorias` deve ser `integer` e `preco` `decimal` com duas casas.
     - Os demais elementos são do tipo `string`;
-    - O elemento `preco` deve conter um atributo `moeda`, com as opções `BRL` e `USD`, o padrão deve ser `BRL`.
+    - O elemento `preco` deve conter um atributo `moeda`,  o padrão deve ser `BRL` (use o `default="BRL"`).
 - Valide seu XML com esse XSD
 
 ---
