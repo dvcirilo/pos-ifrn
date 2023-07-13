@@ -463,7 +463,6 @@ img {
     - Elemento `ingredientes` deve conter 1 ou mais sub-elementos `ingrediente`;
     - `calorias` deve ser `integer` e `preco` `decimal` com duas casas.
     - Os demais elementos são do tipo `string`;
-    - O elemento `preco` deve conter um atributo `moeda`,  o padrão deve ser `BRL` (use o `default="BRL"`).
 - Valide seu XML com esse XSD
 
 ---
@@ -472,7 +471,7 @@ img {
 - Crie um XSD `imobiliaria.xsd` para os dados de uma imobiliária que cumpra os seguintes requisitos:
     - O elemento raiz é `imobiliária` e deve conter um ou mais elementos `imovel`.
     - O elemento `imovel` deve conter os sub-elementos `descricao`, `proprietario`, `endereco`, `caracteristicas` e `valor`.
-    - O elemento `proprietario` deve conter os sub-elementos `nome` e pelo menos um `email` ou `telefone` (pode ter mais de um).
+    - O elemento `proprietario` deve conter os sub-elementos `nome` e os elementos `email` ou `telefone` são opcionais (pode ter mais de um).
     - O elemento `endereco` deve conter os sub-elementos `rua`, `bairro`, `cidade` e `número`, que deve ser opcional.
     - O elemento `caracteristicas` deve conter os sub-elementos `tamanho`, `numQuartos` e  `numBanheiros`.
     - `número`, `numQuartos` e `numBanheiros` são `integer` e `tamanho` é `decimal`
