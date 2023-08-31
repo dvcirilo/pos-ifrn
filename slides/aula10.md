@@ -133,6 +133,76 @@ Preço: R$10,00
 Calorias: 1000kcal
 Tempo de preparo: 30 minutos.
 ```
+---
+# Parsers para JSON
+- O JSON é suportado nativamente no Python
+- A biblioteca `json` fornece, entre outros, os métodos:
+    - `load` e `loads`, de um arquivo ou *s*tring, respectivamente.
+    - `dump` e `dumps`, para um arquivo ou *s*tring, respectivamente.
+- A conversão básica é entre um `dict` para um Objeto JSON e vice-versa.
+
+---
+<style scoped>
+table {
+    height: 100%;
+    width: 100%;
+    font-size: 22px;
+    margin-left: auto;
+    margin-right: auto;
+}
+</style>
+# Equivalência Python-JSON
+
+| Python |	JSON  |
+|:------:|:------:|
+| dict	 |  Object|
+| list	 |  Array |
+| tuple	 |  Array |
+| str	 |  String|
+| int	 |  Number|
+| float	 |  Number|
+| True	 |  true  |
+| False	 |  false |
+| None	 |  null  |
+
+---
+# Exemplos
+
+```python
+import json
+
+# Importar de um arquivo
+with open('data.json') as json_file:
+    parsed_data = json.load(json_file)
+
+# Importar de uma string
+json_string = '{"key": "value", "array": [1, 2, 3]}'
+parsed_data = json.loads(json_string)
+
+# Escrever em um arquivo:
+data = {
+    "name": "John",
+    "age": 30,
+    "city": "New York"
+}
+
+with open("data.json", "w") as json_file:
+    json.dump(data, json_file)
+
+# Escrever em uma string:
+json_string = json.dumps(data)
+
+```
+---
+# Exercício
+
+- Baseado nos exemplos das aulas anteriores, faça o *parse* do arquivo XML da imobiliária para um arquivo JSON equivalente.
+
+---
+# Exercício
+- Já com o arquivo JSON da imobiliária, faça um programa interativo para visualização dos dados dos imóveis, no mesmo padrão do exercício anterior (do cardápio).
+- O programa deve apresentar ao usuário um Menu com um índice(ID) dos imóveis e perguntar qual imóvel o usuário deseja saber mais detalhes.
+- Ao digitar o ID e apertar enter, o programa deve imprimir todas as informações do imóvel, em uma formatação legível.
 
 ---
 # <!--fit--> Dúvidas? 🤔
