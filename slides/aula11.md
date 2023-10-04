@@ -259,7 +259,6 @@ print(response.json())
     - Listar usuários
     - Listar as tarefas do usuário
     - Criar/Ler/Atualizar/Deletar usuários
-    - Criar/Ler/Atualizar/Deletar tarefas de usuário
 
 ---
 # API *Wrappers*
@@ -269,7 +268,7 @@ print(response.json())
 - Ex. `python-twitter`, `pygithub`
 
 ---
-# Prática
+# Exercício
 - Desenvolva um wrapper para a API dos *users*
 - Exemplo de uso:
 ```python
