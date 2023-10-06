@@ -254,10 +254,10 @@ print(response.json())
 ---
 # Exercício
 
-- Implemente uma CLI para CRUD das *to-dos*
+- Implemente uma CLI para CRUD dos usuários da [JSON Placeholder](https://jasonplaceholder.typicode.com/users)
 - Apresente as opções de:
-    - Listar usuários
-    - Listar as tarefas do usuário
+    - Listar todos usuários
+    - Listar as tarefas de um usuário específico (users/ID/todos)
     - Criar/Ler/Atualizar/Deletar usuários
 
 ---
@@ -269,14 +269,16 @@ print(response.json())
 
 ---
 # Exercício
-- Desenvolva um wrapper para a API dos *users*
+- Desenvolva um wrapper para o CRUD da API dos *users* com as funções `list`, `create`, `read`, `update` e `delete`.
+- Desenvolva uma CLI (como no exercício anterior) que use a sua biblioteca.
 - Exemplo de uso:
 ```python
-import users-wrapper as users
+import users_wrapper as users
 
 user = users.read(user_id)
 print(user["name"])
 
+# Listar usuários
 users-list = users.list()
 
 users.delete(user_id)
