@@ -90,7 +90,7 @@ headers = {
 
 print(headers)
 
-response = requests.get(api_url+"v2/minhas-informacoes/meus-dados/", json=data, headers=headers)
+response = requests.get(api_url+"v2/minhas-informacoes/meus-dados/", headers=headers)
 
 print(response.text)
 print(response)
@@ -99,6 +99,7 @@ print(response)
 ---
 # Tarefa
 - Faça um cliente que se autentique com as API Keys do SUAP e retorne o boletim do aluno formatado no terminal.
+- A formatação deve ser no estilo tabela, indicando a disciplina e notas de todas as unidades.
 
 ---
 # OAuth
