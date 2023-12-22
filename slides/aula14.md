@@ -68,7 +68,7 @@ img {
 - Só?
 
 ---
-# <!-- fit --> Exemplo
+# <!-- fit --> [Exemplo](https://github.com/dvcirilo/pos-ifrn/blob/main/docs/tutorial_drf.md)
 
 ---
 # Projeto Final
