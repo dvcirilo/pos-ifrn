@@ -13,7 +13,7 @@ python -m venv venv
 
 Ative o ambiente virtual (no Windows). Não é necessário entrar na pasta, mas se entrar, lembre-se de voltar para a pasta raiz do projeto (*spotifake*):
 ```sh
-.\venv\Scrips\Activate.ps1
+.\venv\Scripts\Activate.ps1
 ```
 
 Com o `venv` ativado, instale o *Django*:
