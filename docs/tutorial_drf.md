@@ -209,3 +209,14 @@ Para uma melhor visualização, é interessante criar os métodos `__str__()` pa
 def __str__(self):
     return self.nome
 ```
+
+### Opcional: Rotas Aninhadas (Nested Routes)
+O DRF não aceita rotas aninhadas por padrão, por exemplo, para ver os albuns do artista com id 1, não poderíamos usar: `/artista/1/albuns`.
+
+Para obter essa funcionalidade, use o pacote [drf-nested-routers](https://github.com/alanjds/drf-nested-routers).
+```sh
+pip install drf-nested-routers
+```
+
+Veja a documentação [aqui](https://github.com/alanjds/drf-nested-routers) para mais detalhes.
+
