@@ -1,3 +1,3 @@
-# Programação Orientada a Serviços - 2022.2
+# Programação Orientada a Serviços
 
 Material de aula da disciplina de Programação Orientada a Serviços.
