@@ -190,7 +190,7 @@ img {
 - Crie um XML `imobiliaria.xml` com DTD **interno** para os dados de uma imobiliária que cumpra os seguintes requisitos:
     - O elemento raiz é `imobiliária` e deve conter um ou mais elementos `imovel`.
     - O elemento `imovel` deve conter os sub-elementos `descricao`, `proprietario`, `endereco`, `caracteristicas` e `valor`.
-    - O elemento `proprietario` deve conter os sub-elementos `nome` e pelo menos um `email` ou `telefone` (pode ter mais de um).
+    - O elemento `proprietario` deve conter os sub-elementos `nome` e pelo menos um `email` ou `telefone` (pode ter mais de um e pode ter os dois).
     - O elemento `endereco` deve conter os sub-elementos `rua`, `bairro`, `cidade` e `número`, que deve ser opcional.
     - O elemento `caracteristicas` deve conter os sub-elementos `tamanho`, `numQuartos` e  `numBanheiros`.
     - O tipo de dado padrão para os demais elementos é PCDATA.
@@ -199,7 +199,7 @@ img {
     - Teste também um imóvel sem número.
 ---
 # Tarefa
-- Crie um XML válido com pelo menos 5 questões de 4 alternativas para o [quiz.dtd](https://dvcirilo.github.io/pos-ifrn/docs/quiz.dtd)
+- Crie um XML válido com pelo menos 5 questões de 4 alternativas para o [quiz.dtd](https://github.com/dvcirilo/pos-ifrn/blob/main/src/quiz.dtd)
 - Use o VSCode para validar o XML.
 
 ---
