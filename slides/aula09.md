@@ -87,8 +87,8 @@ img {
 ```
 ---
 # Tarefa
-- Converta os 4 XMLs gerados nas atividades anteriores para JSON
-    - Cardápio, Imobiliária, Quiz e TCC.
+- Converta os 3 XMLs gerados nas atividades anteriores para JSON
+    - Cardápio, Imobiliária e Quiz.
 - Converta os atributos para elementos.
 - [JSON Lint](https://jsonlint.com/)
 
