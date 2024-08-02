@@ -78,7 +78,7 @@ img {
 ```python
 from xml.dom.minidom import parse
 
-dom = xml.dom.minidom.parse("biblioteca.xml")
+dom = parse("biblioteca.xml")
 
 # Elemento raiz do XML (biblioteca)
 biblioteca = dom.documentElement
@@ -99,7 +99,7 @@ for livro in livros:
 
     print("Categoria:", categoria)
     print("Título:", titulo)
-    print(f'Autor: autor)
+    print(f'Autor: {autor} ({origem})')
     print("Ano:", ano)
     print("---\n")
 ```
@@ -109,7 +109,7 @@ for livro in livros:
 - O programa deve apresentar ao usuário um Menu com os IDs e nomes dos pratos e perguntar qual prato o usuário deseja saber mais detalhes.
 - Ao digitar o ID e apertar enter, o programa deve imprimir todas as informações do prato.
 - Exemplo da saída no próximo slide.
-- [DICA](https://dvcirilo.github.io/pos-ifrn/src/cli_biblioteca.py)
+- [DICA](https://github.com/dvcirilo/pos-ifrn/blob/main/src/biblioteca.py)
 
 ---
 # Exemplo
