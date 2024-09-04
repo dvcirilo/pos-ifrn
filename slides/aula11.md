@@ -254,7 +254,7 @@ print(response.json())
 ---
 # Exercício
 
-- Implemente uma CLI para CRUD dos usuários da [JSON Placeholder](https://jasonplaceholder.typicode.com/users)
+- Implemente uma CLI para CRUD dos usuários da [JSON Placeholder](https://jsonplaceholder.typicode.com/users)
 - Apresente as opções de:
     - Listar todos usuários
     - Listar as tarefas de um usuário específico (users/ID/todos)
