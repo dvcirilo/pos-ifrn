@@ -106,7 +106,7 @@ print(response)
 
 - Open Authorization
 - Padrão aberto de serviços de autorização
-- Usado na maioria dos serviços grandes, ex. Google, Facebook, Twitter, SUAP, etc.
+- Usado na maioria dos serviços grandes, ex. Google, Facebook, <del>Twitter</del>, SUAP, etc.
 
 ---
 # OAuth
@@ -119,10 +119,32 @@ print(response)
 - Aplicações devem ser registradas no serviço
     - Client ID e Client Secret
     - Redirect URI
+    - Client Type, Grant Type, etc.
 - API Disponibiliza:
     - Access Token - URL
     - Authorization URL
-- Aplicação deve guardar token (session)
+    - Scopes, etc.
+- Aplicação deve guardar token (session/cookies) para as próximas requisições.
+
+---
+# Tipos de cliente
+
+- *Public*: aplicações onde não é possível esconder o Client Secret (Fron-end e Apps).
+- *Confidential*: aplicações "*client-side*".
+
+---
+# *Grant Flows*
+
+- *Authorization Code*
+- *Proof Key for Code Exchange* - PKCE 
+- *Implicit*
+- *Device Code*
+- *OIDC*
+
+---
+# Riscos no OAuth
+
+- Client Impersonation
 
 ---
 # Acesso OAuth do SUAP no Flask
@@ -138,6 +160,13 @@ print(response)
 
 - Faça um cliente do SUAP com autenticação OAuth que apresente o perfil do usuário com foto e permita a visualização dos boletins, com seleção de ano/semestre.
 - Caprichem no front-end 😁
+
+---
+# Referências
+- https://developer.okta.com/blog/2022/06/01/oauth-public-client-identity
+- https://auth0.com/docs/get-started/applications/confidential-and-public-applications
+- https://www.oauth.com/playground/
+- https://www.youtube.com/watch?v=CHzERullHe8
 
 ---
 

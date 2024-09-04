@@ -4,7 +4,7 @@ size: 4:3
 marp: true
 paginate: true
 _paginate: false
-title: Aula 14: Serviços REST
+title: Aula 14: Clientes JavaScript
 author: Diego Cirilo
 
 ---
@@ -19,71 +19,75 @@ img {
 
 ### Prof. Diego Cirilo
 
-**Aula 14**: Serviços REST
+**Aula 14**: Clientes JavaScript
 
 ---
-# Desenvolvendo Serviços
-
-- Client/Server ou sistemas monolíticos?
-- APIs/Serviços
-- Por que criar APIs?
-- SaaS - Software as a service
-- Múltiplos clientes: web/mobile/terceiros.
-
----
-# RESTful APIs 
-
-- Uma API deve ser útil para programadores.
-- O uso da API deve ser padronizado.
-- Padrão REST/JSON.
-- Documentação!
+# Clientes no *Front-end*
+- Usualmente as funcionalidades de um sistema web estão no servidor
+- O servidor recebe as requisições, processa/acessa dados e *monta* o HTML
+- As páginas HTML são enviadas *prontas* para o cliente (navegador)
+- Depois de enviado ao cliente, o servidor não tem mais controle sobre a página
+- Como *desacoplar* a interface de usuário do servidor?
 
 ---
-# Boas práticas em RESTful APIs
-
-- Endpoints claros: recursos.
-- Métodos HTTP: ações.
-- Serialização: JSON.
-- Códigos de status HTTP: erros.
-- Permita filtragem/paginação/ordenação.
-- Backward Compatibility/Compatibilidade reversa.
-- Versionamento
+# Clientes no *Front-end*
+- *Front-end* nesse sentido é o lado do C
 
 ---
-# Django REST Framework
-
-- Django vs. Flask?
-- [Django Rest Framework](https://www.django-rest-framework.org/)
-- Suporte "nativo" a página de documentação, ORM, autenticação, etc.
-- Pode ser adicionado a um projeto já existente.
-- *Serializers*
-
----
-# Django REST Framework
-
-- Instale o `djangorestframework` com o `pip`
-- Adicione o `rest_framework` no `INSTALLED_APPS` do arquivo `settings.py`.
-- Adicione os *serializers* em `serializers.py`.
-- Adeque as *views*.
-- Só?
+# JavaScript
+- Linguagem *interpretada*, com tipagem dinâmica e multi-paradigma
+- Desenvolvida nos anos 90 para dinamizar páginas web
+- Permite alterar o conteúdo da página no lado do cliente
+- É executada por uma *engine* no navegador
+- Em meados dos anos 2000 surgiram os *runtimes* nativos, como o Node.js
 
 ---
-# <!-- fit --> [Exemplo](https://github.com/dvcirilo/pos-ifrn/blob/main/docs/tutorial_drf.md)
+# Versões do JavaScript
 
 ---
-# Projeto Final
+# Runtimes do JS
 
-- Crie uma API [JSON Placeholder](https://jsonplaceholder.typicode.com/guide/) da *Shopee*.
-- Sua API deve permitir o CRUD de User, ToDo, Posts e Comments, seguindo o esquema da API original.
-- Não é necessário Autenticação, e o modelo User pode ser simplificado.
-- Crie também um cliente web (com Flask) que acesse sua API. O cliente deve ter front-end com estilos.
-- O projeto é em dupla(no máximo!), e terá uma nota para o Cliente e outra para o Serviço.
+---
+# *Bundling*
+- Webpack
+
+---
+# Tipo de dados
+
+---
+# Strings
+
+---
+# Manipulação da DOM
+- *Document Object Model*
+- Uma das principais funções do JS é manipular a DOM
+- Criar/remover elementos, substituir conteúdo, alterar atributos, etc
+
+---
+# jQuery
+
+---
+# Eventos JS
+- Os eventos reagem a ações do usuário, servidor ou temporizadas
+- Permitem a execução de funções quando algo acontece
+- Ex. `click`, `hover`, etc.
+
+---
+# Funções no JS
+- A sintaxe para declarar funções mudou 
+
+---
+# Declarativo x Imperativo
+
+---
+# ReactJS
+- Precisa?
 
 ---
 # Referências
-- https://yalantis.com/blog/how-to-create-a-restful-api/
-- https://stackoverflow.blog/2020/03/02/best-practices-for-rest-api-design/
+- https://javascript.info/
+- https://developer.mozilla.org/pt-BR/docs/Web/JavaScript
+- https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript
 
 ---
-
 # <!--fit--> Dúvidas? 🤔

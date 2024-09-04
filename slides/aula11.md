@@ -284,4 +284,6 @@ users-list = users.list()
 users.delete(user_id)
 ```
 ---
+# Clientes JavaScript
+
 # <!--fit--> Dúvidas? 🤔
