@@ -129,7 +129,7 @@ print(response)
 ---
 # Tipos de cliente
 
-- *Public*: aplicações onde não é possível esconder o Client Secret (Fron-end e Apps).
+- *Public*: aplicações onde não é possível esconder o Client Secret (Front-end e Apps).
 - *Confidential*: aplicações "*client-side*".
 
 ---
@@ -156,7 +156,16 @@ print(response)
 - [Exemplo](https://github.com/dvcirilo/pos-ifrn/tree/main/src/suap_oauth)
 
 ---
-# Tarefa Final - Terceira Unidade
+# Acesso OAuth do SUAP com JavaScript
+
+- Registre sua aplicação em https://suap.ifrn.edu.br/api/
+- Authorization grant type: `authorization-code`
+- Redicert URIs: `http://localhost:8888/login/authorized`
+- Guarde o Client ID e Client Secret
+- [Exemplo](https://github.com/dvcirilo/cliente_suap_javascript)
+
+---
+# Tarefa Final - Segunda Unidade
 
 - Faça um cliente do SUAP com autenticação OAuth que apresente o perfil do usuário com foto e permita a visualização dos boletins, com seleção de ano/semestre.
 - Caprichem no front-end 😁
