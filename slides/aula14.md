@@ -85,6 +85,39 @@ img {
     - Executam JavaScript diretamente nos navegadores, oferecendo suporte para aplicações web interativas.
 
 ---
+# *Bundling*
+- Webpack
+
+---
+# Tipo de dados
+
+---
+# Strings
+
+---
+# Manipulação da DOM
+- *Document Object Model*
+- Uma das principais funções do JS é manipular a DOM
+- Criar/remover elementos, substituir conteúdo, alterar atributos, etc
+
+---
+# jQuery
+
+---
+# Eventos JS
+- Os eventos reagem a ações do usuário, servidor ou temporizadas
+- Permitem a execução de funções quando algo acontece
+- Ex. `click`, `hover`, etc.
+
+---
+# Funções no JS
+- A sintaxe para declarar funções mudou 
+
+---
+# Declarativo x Imperativo
+
+
+---
 # Referências
 - https://javascript.info/
 - https://developer.mozilla.org/pt-BR/docs/Web/JavaScript
