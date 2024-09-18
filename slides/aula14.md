@@ -89,7 +89,27 @@ img {
 - Webpack
 
 ---
+# Declarações
+- Variáveis podem ser declaradas com:
+    - Automaticamente (não recomendado)
+    - `var` - Escopo global com *hoisting*.
+    - `let` - Variável com escopo de bloco.
+    - `const` - Constantes, o valor/tipo não pode mudar.
+
+---
+# *Hoisting*
+- Joga as declarações automaticamente para o topo do script.
+- Permite usar variáveis/funções que ainda serão declaradas.
+- Funciona com `var` e declaração de funções.
+- Pode ser uma fonte de *bugs* se não for tratado com cuidado.
+
+---
 # Tipo de dados
+- O JavaScript tem tipagem *dinâmica* e *fraca*.
+- `var` e `let` podem receber tipos de dados diferentes
+- Tipos primitivos:
+    - String, Number, Bigint, Boolean, Undefined, Null, Symbol
+- O resto é objeto (*Object*)
 
 ---
 # Strings
@@ -102,6 +122,11 @@ img {
 
 ---
 # jQuery
+- Biblioteca desenvolvida pra simplificar a manipulação da DOM, eventos, requisições, etc.
+- Usa uma linguagem menos *verbosa* que o JavaScript puro (*Vanilla*)
+- Já foi "obrigatória", hoje é possível fazer tudo sem ela.
+- Mesmo assim, ainda é mais cômodo utiliza-la.
+- [*You might not need jQuery*](https://youmightnotneedjquery.com/)
 
 ---
 # Eventos JS
