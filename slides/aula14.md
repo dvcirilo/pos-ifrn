@@ -85,10 +85,6 @@ img {
     - Executam JavaScript diretamente nos navegadores, oferecendo suporte para aplicações web interativas.
 
 ---
-# *Bundling*
-- Webpack
-
----
 # Declarações
 - Variáveis podem ser declaradas com:
     - Automaticamente (não recomendado)
@@ -112,7 +108,30 @@ img {
 - O resto é objeto (*Object*)
 
 ---
+# Objetos JS
+- JavaScript Object Notation
+```js
+const bejeto = {
+    nome: "Ana",
+    idade: 20,
+    profissao: "Desenvolvedora",
+    saudacao: function() {
+        return `Olá, meu nome é ${this.nome}.`;
+    }
+};
+```
+
+---
 # Strings
+- Podem ser delimitadas com:
+    - ````
+    - ""
+    - ''
+- O ```` é chamado de *string literal* e permite interpolação, múltiplas linhas, etc.
+```js
+const cor = "azul";
+const informacao = `O display é ${cor}.`;
+```
 
 ---
 # Manipulação da DOM
@@ -121,10 +140,41 @@ img {
 - Criar/remover elementos, substituir conteúdo, alterar atributos, etc
 
 ---
+# Manipulação da DOM
+- Selecionar elementos:
+    - `document.getElementById('id')`
+    - `document.querySelector('.classe')`
+    - `document.querySelectorAll('tag')`
+
+- Modificar Conteúdo
+    - `element.textContent = 'Novo texto'`
+    - `element.innerHTML = '<p>Novo HTML</p>'`
+
+---
+# Manipulação da DOM
+- Alterar Estilos
+    - `element.style.color = 'red'`
+    - `element.classList.add('nova-classe')`
+    - `element.classList.remove('classe-existente')`
+
+- Criar e Inserir Elementos
+    - `document.createElement('div')`
+    - `parentElement.appendChild(novoElemento)`
+
+---
+# Manipulação da DOM
+- Exemplo:
+```js
+const paragrafo = document.createElement('p');
+paragrafo.textContent = 'Este é um novo parágrafo.';
+document.body.appendChild(paragrafo);
+```
+
+---
 # jQuery
 - Biblioteca desenvolvida pra simplificar a manipulação da DOM, eventos, requisições, etc.
 - Usa uma linguagem menos *verbosa* que o JavaScript puro (*Vanilla*)
-- Já foi "obrigatória", hoje é possível fazer tudo sem ela.
+- Já foi "obrigatória", hoje é possível fazer *quase* tudo sem ela.
 - Mesmo assim, ainda é mais cômodo utiliza-la.
 - [*You might not need jQuery*](https://youmightnotneedjquery.com/)
 
@@ -132,15 +182,113 @@ img {
 # Eventos JS
 - Os eventos reagem a ações do usuário, servidor ou temporizadas
 - Permitem a execução de funções quando algo acontece
-- Ex. `click`, `hover`, etc.
+- Ex. `click`, `mouseover`, etc.
+```js
+elemento.addEventListener('click', function() {
+    alert('Elemento clicado!');
+});
+```
 
 ---
 # Funções no JS
-- A sintaxe para declarar funções mudou 
+- Funções padrão:
+```js
+function somar(a, b) {
+    return a + b;
+}
+```
+
+- Funções anônimas:
+```js
+const saudacao = function(nome) {
+    return `Olá, ${nome}!`;
+};
+```
+
+- Funções flecha (*Arrow functions*)
+```js
+const multiplicar = (a, b) => {
+    const resultado = a * b;
+    return resultado;
+};
+```
 
 ---
-# Declarativo x Imperativo
+# *Promises*
+- Algumas operações não devem bloquear a execução do código
+- Esse é o princípio de operações *assíncronas*
+- O JavaScript pode retornar *promessas* em uma função que pode demorar
+- O código continua sua execução.
 
+---
+# *Promises*
+- Uma Promise pode estar em um dos três estados:
+    - Pendente (*pending*): Estado inicial, ainda não resolvida ou rejeitada.
+    - Resolvida (*fulfilled*): A operação foi completada com sucesso.
+    - Rejeitada (*rejected*): A operação falhou.
+
+---
+# *Promises*
+- Podemos consumir as promessas com:
+    - `.then()` - função executada se der certo
+    - `.catch()` - função executada se falhar
+
+---
+# *Promises*
+```js
+promessa
+    .then(resultado => {
+        console.log(resultado);  // "Operação bem-sucedida!"
+    })
+    .catch(erro => {
+        console.error(erro);  // "Falha na operação."
+    });
+```
+
+---
+# *Async/Await*
+
+
+---
+# Fetch API
+- A Fetch API é usada para fazer requisições HTTP no navegador.
+- Substitui o antigo XMLHttpRequest
+- Retorna uma *Promise*
+
+---
+# Exemplo
+```js
+async function buscarDados() {
+    try {
+        const response = await fetch('https://api.exemplo.com/dados');
+        if (!response.ok) {
+            throw new Error('Erro: ' + response.status);
+        }
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.error('Erro:', error);
+    }
+}
+
+buscarDados();
+```
+
+---
+# Fetch API
+- Opções avançadas
+```js
+fetch('https://api.exemplo.com/usuario/1', {
+    method: 'PUT',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ nome: 'Maria', idade: 28 })
+})
+    .then(response => response.json())
+    .then(data => console.log('Atualizado:', data))
+    .catch(error => console.error('Erro:', error));
+```
 
 ---
 # Referências
