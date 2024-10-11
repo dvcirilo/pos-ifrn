@@ -55,7 +55,7 @@ img {
 
 - ECMAScript 6 (ES6, 2015)
   - Let/Const (variáveis de escopo de bloco).
-  - Funções de seta (arrow functions).
+  - *Arrow functions*.
   - Classes e módulos.
   - *Promises* para operações assíncronas.
 
@@ -205,12 +205,24 @@ const saudacao = function(nome) {
 };
 ```
 
-- Funções flecha (*Arrow functions*)
+- *Arrow functions*
 ```js
 const multiplicar = (a, b) => {
     const resultado = a * b;
     return resultado;
 };
+```
+
+---
+# *Arrow functions*
+- Retornam o valor por padrão
+```js
+hello = () => "Hello World!";
+```
+
+- Se houver apenas um parâmetro
+```js
+hello = val => "Hello " + val;
 ```
 
 ---
@@ -247,6 +259,21 @@ promessa
 
 ---
 # *Async/Await*
+- No ES8 surge a sintaxe de *async* e *await* para Promises
+- Torna o código um pouco mais legível
+- As funções assíncronas são declaradas com *async* e a chamada de funções assíncronas com *await*
+```js
+async function minhaFuncaoAssincrona() {
+    try {
+        const resultado = await promessa;
+        console.log(resultado);  // "Operação bem-sucedida!"
+    } catch (erro) {
+        console.error(erro);  // "Erro na operação."
+    }
+}
+
+minhaFuncaoAssincrona();
+```
 
 
 ---
@@ -260,7 +287,7 @@ promessa
 ```js
 async function buscarDados() {
     try {
-        const response = await fetch('https://api.exemplo.com/dados');
+        const response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
         if (!response.ok) {
             throw new Error('Erro: ' + response.status);
         }
@@ -276,7 +303,7 @@ buscarDados();
 
 ---
 # Fetch API
-- Opções avançadas
+- Outras opções:
 ```js
 fetch('https://api.exemplo.com/usuario/1', {
     method: 'PUT',
@@ -289,6 +316,13 @@ fetch('https://api.exemplo.com/usuario/1', {
     .then(data => console.log('Atualizado:', data))
     .catch(error => console.error('Erro:', error));
 ```
+
+---
+# Tarefa
+- Desenvolva a interface e crie um cliente web para uma API aberta.
+- Exemplos:
+    - [JSON Placeholder](https://jsonplaceholder.typicode.com/), [PokeAPI](https://pokeapi.co/), [Tabela FIPE](https://deividfortuna.github.io/fipe/), etc.
+- O cliente deve listar mais de um nível de informações, ex. usuários e to-dos do usuário, fabricante e modelos e veículos.
 
 ---
 # Referências
