@@ -325,6 +325,59 @@ fetch('https://api.exemplo.com/usuario/1', {
 - O cliente deve listar mais de um nível de informações, ex. usuários e to-dos do usuário, fabricante e modelos e veículos.
 
 ---
+# Módulos
+
+- Permitem a melhor organização do código
+- Reuso e escopo
+- Implementados no ES6
+- *export* e *import*
+
+---
+# ESM
+```js
+// Exportando (arquivo myModule.js)
+export const myFunction = () => { ... };
+
+// Importando
+import { myFunction } from './myModule.js';
+```
+
+---
+# Bundling
+
+- Processo de combinar múltiplos arquivos JS em um único arquivo
+- Necessário devido à divisão de código em múltiplos módulos
+- Benefícios:
+    - Reduz o número de requisições HTTP
+    - Melhora o desempenho do site
+    - Facilita a minificação e otimização do código
+- Exemplos:
+    - Webpack, Rollup, Parcel
+
+---
+# Bundling
+
+- Módulos são combinados em um único arquivo (ou múltiplos, dependendo da configuração)
+- Ferramentas de bundling resolvem dependências e geram um arquivo otimizado
+- Exemplo:
+    - Arquivos de entrada: main.js, utils.js, app.js
+    - Saída: bundle.js
+
+---
+# Vite.js
+- Ferramenta de desenvolvimento de front-end
+- Funciona como bundler e servidor de desenvolvimento
+- *Lembra* o que o `django-admin` faz no back-end
+- Utiliza o *Rollup* para bundling
+- [Documentação](https://vite.dev/)
+
+---
+# Tarefa
+
+- Converta o seu cliente JS para uma estrutura JS Vanilla do Vite.js
+- Separe o .js que se comunica com a API em um *wrapper* e o .js que manipula a DOM usando módulos
+
+---
 # Referências
 - https://javascript.info/
 - https://developer.mozilla.org/pt-BR/docs/Web/JavaScript
