@@ -220,3 +220,10 @@ pip install drf-nested-routers
 
 Veja a documentação [aqui](https://github.com/alanjds/drf-nested-routers) para mais detalhes.
 
+### Opcional: CORS Headers
+
+A política de Cross Origin Resource Sharing dos bloqueia requisições entre serviços diferentes, a não ser que explicitamente habilitados pelos *headers* (cabeçalhos) CORS.
+O objetivo é aumentar a segurança evitando a comunicação com cliente não habilitados.
+Para habilitar os CORS headers no DRF usamos o pacote [django-cors-header](https://github.com/adamchainz/django-cors-headers)
+Siga a documentação para instalar e habilitar e configure a variável `CORS_ALLOWED_ORIGINS` ou `CORS_ALLOW_ALL_ORIGINS` em `config/settings.py`
+
