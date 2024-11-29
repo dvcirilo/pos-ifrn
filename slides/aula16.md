@@ -19,7 +19,7 @@ img {
 
 ### Prof. Diego Cirilo
 
-**Aula 15**: Serviços REST
+**Aula 16**: Serviços REST
 
 ---
 # Desenvolvendo Serviços
