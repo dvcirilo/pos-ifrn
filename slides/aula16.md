@@ -74,7 +74,7 @@ img {
 # Tarefa
 - Implemente o serviço do Tutorial do slide anterior
 - Implemente um API Wrapper para o serviço em JS.
-- Utilizando o API Wrapper, implemente um cliente com React para o serviço em questão.
+- Utilizando o API Wrapper, implemente um cliente com JS (React ou Vanilla) para o serviço em questão.
 - O cliente deve ser capaz de utilizar todas as funcionalidades do serviço.
 
 ---
@@ -83,7 +83,7 @@ img {
 - Crie uma API parecida com a [JSON Placeholder](https://jsonplaceholder.typicode.com/guide/).
 - Sua API deve permitir o CRUD de User, ToDo, Posts e Comments, Albums e Photos, seguindo o esquema da API original.
 - Não é necessário Autenticação.
-- Crie também um cliente web (com React) que acesse sua API. O cliente deve ter front-end com estilos.
+- Crie também um cliente web (com React ou Vanilla) que acesse sua API. O cliente deve ter front-end com estilos.
 - O cliente deve ser capaz de utilizar todos os recursos da API, visualizando, editando e criando recursos.
 - O projeto é em dupla(no máximo!), e terá uma nota para o Cliente e outra para o Serviço.
 
